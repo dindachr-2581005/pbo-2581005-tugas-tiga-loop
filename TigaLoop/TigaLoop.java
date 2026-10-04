@@ -103,6 +103,53 @@ do-while mengecek kondisinya sesudah badan loop dijalankan,
 jadi badannya pasti jalan minimal sekali.
 */
 
+        // ==================== Saring deret 1–10 ====================
+
+        int jumlahPrintln = 0;
+
+        System.out.println();
+        System.out.print("Disaring : ");
+
+        for (int i = 1; i <= 10; i++) {
+
+            // Lewati angka genap.
+            if (i % 2 == 0) {
+                continue;
+            }
+
+            // Berhenti jika i > 7.
+            if (i > 7) {
+                break;
+            }
+
+            System.out.print(i + " ");
+            jumlahPrintln++;
+        }
+
+        System.out.println();
+        System.out.println("Sampai println : " + jumlahPrintln + " kali");
+
+
+        /*
+         * KESIMPULAN continue DAN break:
+         *
+         * Pada i = 8, kondisi i % 2 == 0 bernilai benar,
+         * sehingga continue dijalankan terlebih dahulu.
+         * Akibatnya, program melewati pemeriksaan break
+         * dan langsung lanjut ke i = 9.
+         *
+         * Pada i = 9, angka tidak genap sehingga continue
+         * tidak dijalankan. Kemudian i > 7 bernilai benar,
+         * sehingga break menghentikan loop.
+         *
+         * Jadi loop tidak berhenti di i = 8.
+         */
+
+
+        inputTigaLoop.close();
+    }
+}
+
 
 
 
